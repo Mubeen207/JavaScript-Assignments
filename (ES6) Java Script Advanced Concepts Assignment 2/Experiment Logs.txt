@@ -1,0 +1,7 @@
+In This AssignMent I Face Some ISsues And Some UnExpacted Behaiviours,And This BEhaivious i Can Not Be Imagend..
+
+1. My First Unexpected Behaviour is a reduce methode. In This MEthode i See the Auto Sum Functionality That Can BE Not Imagend By Me.
+
+2. My Seconde Behaiviour is Map FuncTion In the map function is simple, just you run map methode on any array you can get values index by index, i Create My Own Map Funtion i see a problem On this And i Solve This PRoblem Using Google Not Chatgpt , Gemini and etc...
+
+3. My Third Behaiviour Is DeStucturing i desturcute object and get value and use.
