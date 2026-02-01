@@ -1,6 +1,5 @@
+let numbers = [1, 2, 3, 4, 5];
 {
-  let numbers = [1, 2, 3, 4, 5];
-
   function localMap(numArr, callBackFunction) {
     let result = [];
     for (let i = 0; i <= numArr.length - 1; i++) {
@@ -15,4 +14,11 @@
     return num * 2;
   });
   console.log(localMapResult);
+}
+{
+  let orignalMap = numbers.map((num) => {
+    console.log("Orignal Map Num: ", num);
+    return num * 2;
+  });
+  console.log(orignalMap);
 }
