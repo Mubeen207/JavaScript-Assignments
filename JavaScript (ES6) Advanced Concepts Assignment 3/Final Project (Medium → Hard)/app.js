@@ -1,33 +1,35 @@
 const tasks = new Map();
+let addTaskFunction = (
+  name,
+  func = () => console.log("This is a default Value"),
+) => {
+  tasks.set(name, func);
+  console.log(tasks);
+};
 
-function addTask(name, fn = () => console.log("Create All AssignMents")) {
-  tasks.set(name, fn);
-}
-
-function runTask(name, repeat = 1) {
-  const task = tasks.get(name);
-  if (task) {
-    for (let i = 0; i < repeat; i++) {
-      task();
+let taskExicuter = (name, callBack) => {
+  let taskName = tasks.get(name);
+  if (taskName) {
+    try {
+      taskName();
+      callBack(true);
+    } catch {
+      callBack(false);
     }
   } else {
-    console.log("Task not found");
+    callBack(false);
   }
-}
+};
 
-function runAll(repeat = 1) {
-  for (const task of tasks.values()) {
-    for (let i = 0; i < repeat; i++) {
-      task();
-    }
+let callBack = (flag) => {
+  if (flag) {
+    console.log("Task Run SuccessFully");
+  } else {
+    console.log("Task NOt Run SuccessFully");
   }
-}
-
-addTask("sayHello", () => console.log("Hello!"));
-addTask("showTime", () =>
-  console.log("Time", new Date().toLocaleTimeString()),
-);
-addTask("Create All AssignMents");
-
-runTask("sayHello", 2);
-runAll(1);
+};
+addTaskFunction("Mubeen", () => console.log("This is My Name Mubeen Ul ISlam"));
+addTaskFunction("CD", () => console.log("This is My Nick Name CD"));
+taskExicuter("Mubeen", callBack);
+taskExicuter("CD", callBack);
+taskExicuter("Zaheer", callBack);
