@@ -1,6 +1,6 @@
 function delayedGreeting(flag) {
   if (flag) {
-    console.log(`Hello, ${this.name} Using Bind`);
+    console.log(`Hello ${this.name} Using Bind`);
   } else {
     console.log(`Hello ${this.name} this is not bind using`);
   }
