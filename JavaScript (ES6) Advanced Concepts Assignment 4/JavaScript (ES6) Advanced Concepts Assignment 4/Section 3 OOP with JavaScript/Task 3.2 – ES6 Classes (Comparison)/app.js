@@ -3,15 +3,14 @@ class User {
     this.name = name;
     this.age = age;
   }
+  greet() {
+    return `My name Is ${this.name} and I am ${this.age} years old.`;
+  }
 }
 
-User.prototype.greet = function () {
-  return `My name Is ${this.name} and I am ${this.age} years old.`;
-};
-
-const user1 = new User("Mubeen", 19);
-const user2 = new User("Zaheer", 20);
-const user3 = new User("Owais", 23);
+let user1 = new User("Mubeen", 19);
+let user2 = new User("Zaheer", 20);
+let user3 = new User("Owais", 23);
 
 console.log(user1.greet());
 console.log(user2.greet());
