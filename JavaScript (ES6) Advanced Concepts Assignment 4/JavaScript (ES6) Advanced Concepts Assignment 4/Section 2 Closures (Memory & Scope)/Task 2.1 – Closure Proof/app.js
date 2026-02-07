@@ -6,10 +6,11 @@ function createCounter() {
   };
 }
 
-let countA = createCounter();
-let countB = createCounter();
-countA("This is countA");
-countA("This is countA");
-countB("This is countB");
-countA("This is countA");
-countB("This is countB");
+let myCounter = createCounter();
+myCounter("First call");
+myCounter("Second call");
+myCounter("Third call");
+
+let anotherCounter = createCounter();
+anotherCounter("First call to another counter");
+anotherCounter("Second call to another counter");
